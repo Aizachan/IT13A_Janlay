@@ -4,17 +4,34 @@
  */
 package Midterm;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Aiza
  */
 public class IT13A_JANLAY_ACT {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
-    
+     public static void main(String[] args) {
+
+        Scanner in = new Scanner(System.in);
+        System.out.print("Please enter a word: ");
+        String word = in.nextLine();
+
+        String reversed = "";
+
+        for (int y = word.length() - 1; y >= 0; y--) {
+            reversed += word.charAt(y);
+        }
+
+        if (word.equalsIgnoreCase(reversed)) {
+            System.out.println(word.toLowerCase() + " is a palindrome");
+        } else {
+            System.out.println(word.toLowerCase() + " is NOT a palindrome");
+        }
+     }
 }
+    
+    
+    
+
